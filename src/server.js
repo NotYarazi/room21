@@ -1,4 +1,5 @@
 const fs = require('fs');
+const crypto = require('crypto');
 const https = require('https');
 const http = require('http');
 const path = require('path');
@@ -125,9 +126,9 @@ function generateUniqueUsername() {
         'Flame', 'Storm', 'Thunder', 'Lightning', 'Glacier', 'Volcano', 'Tornado', 'Tsunami'
     ];
 
-    const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
-    const noun = nouns[Math.floor(Math.random() * nouns.length)];
-    const number = Math.floor(Math.random() * 1000);
+    const adjective = adjectives[crypto.randomInt(0, adjectives.length)];
+    const noun = nouns[crypto.randomInt(0, nouns.length)];
+    const number = crypto.randomInt(0, 1000);
     return `${adjective}${noun}${number}`;
 }
 
