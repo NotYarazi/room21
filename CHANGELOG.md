@@ -62,10 +62,7 @@ All notable changes to Room21 will be documented in this file.
 - [ ] Voice message support
 - [ ] Enhanced moderation tools
 - [ ] Optional user authentication
-- [ ] Database integration for persistence
-- [ ] Mobile application versions
 - [ ] Advanced emoji and reaction system
-- [ ] Message search functionality
 
 ### Under Consideration
 - [ ] Video calling integration
