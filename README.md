@@ -1,11 +1,9 @@
-<img src="https://github.com/NotYarazi/room21/blob/main/brand/Room21.png" align="left" width="180"/>
+# Room21 v4.0 🚀
 
-### `Room21 v4.0 🚀`
+A modern, secure, and anonymous real-time chat application built with Node.js, WebSockets, and modern web technologies.
 
-### A modern, secure, and anonymous real-time chat application built with Node.js, WebSockets, and modern web technologies.
----
----
 > **⚠️ Disclaimer**: This is the original Room21 project by umaera (NotYarazi). Any forks, modifications, or derivative works are not associated with or endorsed by the original authors. Please verify the authenticity of the source before use.
+
 ## ✨ Features
 
 ### 🔒 Security & Privacy
