@@ -5,6 +5,7 @@ const path = require('path');
 const WebSocket = require('ws');
 const express = require('express');
 const session = require('express-session');
+const rateLimit = require('express-rate-limit');
 const readline = require('readline');
 const app = express();
 const port = process.env.PORT || 3000;
@@ -204,7 +205,13 @@ app.use(express.static(path.join(__dirname, 'public'), {
     }
 }));
 
-app.get('/', (req, res) => {
+const rootLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // Limit each IP to 100 requests per windowMs
+    message: 'Too many requests from this IP, please try again later.'
+});
+
+app.get('/', rootLimiter, (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
