@@ -156,7 +156,14 @@ if (USE_HTTPS) {
 } else {
     // HTTP mode - Minimal CSP to avoid conflicts
     helmetConfig = {
-        contentSecurityPolicy: false, // Disable CSP entirely in HTTP mode
+        contentSecurityPolicy: {
+            directives: {
+                defaultSrc: ["'self'"],
+                scriptSrc: ["'self'", "'unsafe-inline'"],
+                styleSrc: ["'self'", "'unsafe-inline'"],
+                imgSrc: ["'self'", "data:"]
+            }
+        },
         hsts: false // Disable HSTS in HTTP mode
     };
     console.log('Using HTTP configuration (CSP disabled)');
