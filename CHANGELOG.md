@@ -5,7 +5,7 @@ All notable changes to Room21 will be documented in this file.
 ## [4.0.0] - 2025-07-22
 
 ### Added
-- 🎨 Complete UI redesign with Copilot-inspired glassmorphism theme
+- 🎨 Complete UI redesign with Copilot-inspired theme
 - 🔒 Enhanced security with improved input sanitization
 - 💬 Better message handling and real-time communication
 - 📱 Improved mobile support and responsive design
@@ -74,6 +74,7 @@ All notable changes to Room21 will be documented in this file.
 - [ ] Plugin system
 - [ ] API for third-party integrations
 
+## BUT DON'T WORRY: we are still going to develop the anonymous version.
 ---
 
 *Note: This changelog follows semantic versioning. Major version changes (X.0.0) indicate breaking changes, minor versions (x.Y.0) add new features, and patch versions (x.y.Z) include bug fixes and improvements.*
