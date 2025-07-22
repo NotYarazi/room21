@@ -190,7 +190,6 @@ Room21 can be installed as a Progressive Web App:
 ## 📋 Documentation
 
 - **[Contributing Guidelines](CONTRIBUTING.md)** - How to contribute to the project
-- **[Privacy Policy](PRIVACY.md)** - Our privacy practices and data handling
 - **[Changelog](CHANGELOG.md)** - Detailed version history and changes
 - **[License](LICENSE)** - Creative Commons licensing terms
 
@@ -236,10 +235,4 @@ Room21 is built with **privacy-first principles**:
 - Complete anonymity by design
 - HTTPS/WSS encryption for all communications
 
-Read our full [Privacy Policy](PRIVACY.md) for details.
-
 **⚠️ Important**: The original authors are not responsible for any modifications, forks, or derivative works. Only use trusted sources and verify authenticity.
-
----
-
-**Room21 v4.0** - Anonymous • Secure • Modern • Open Source
