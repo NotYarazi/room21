@@ -1,6 +1,6 @@
 <img src="https://github.com/NotYarazi/room21/blob/main/brand/Room21.png" align="left" width="180"/>
 
-### `Room21 v4.0 🚀`
+### `Room21 v4.1`
 
 ### A modern, secure, and anonymous real-time chat application built with Node.js, WebSockets, and modern web technologies.
 ---
