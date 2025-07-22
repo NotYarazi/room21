@@ -430,13 +430,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function displayUserList(users) {
-        const userList = users.map(user => 
-            `${user.username} (online since ${new Date(user.connectedAt).toLocaleTimeString()})`
-        ).join('<br>');
-        
         const usersElement = document.createElement('div');
         usersElement.className = 'system-message info';
-        usersElement.innerHTML = `<strong>Online Users (${users.length}):</strong><br>${userList}`;
+        
+        const title = document.createElement('strong');
+        title.textContent = `Online Users (${users.length}):`;
+        usersElement.appendChild(title);
+        usersElement.appendChild(document.createElement('br'));
+        
+        users.forEach(user => {
+            const userElement = document.createElement('div');
+            const username = document.createElement('span');
+            username.textContent = user.username;
+            const connectedAt = document.createElement('span');
+            connectedAt.textContent = ` (online since ${new Date(user.connectedAt).toLocaleTimeString()})`;
+            
+            userElement.appendChild(username);
+            userElement.appendChild(connectedAt);
+            usersElement.appendChild(userElement);
+        });
+        
         chatBox.appendChild(usersElement);
         scrollToBottom();
     }
