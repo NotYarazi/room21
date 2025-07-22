@@ -1,6 +1,6 @@
-# Privacy Policy
+# SECURITY - Privacy Policy
 
-**Last updated: July 22, 2025**
+**Last updated: July 23, 2025**
 
 ## Overview
 Room21 is designed with privacy as a core principle. This policy explains how we handle data in our anonymous chat application.
