@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTTP Test - Room21</title>
+</head>
+<body>
+    <h1>HTTP Test Page</h1>
+    <p>If you can see this page, HTTP is working!</p>
+    <p>Current protocol: <span id="protocol"></span></p>
+    <p>Current host: <span id="host"></span></p>
+    
+    <script>
+        document.getElementById('protocol').textContent = window.location.protocol;
+        document.getElementById('host').textContent = window.location.host;
+        console.log('Test page loaded successfully');
+        console.log('Protocol:', window.location.protocol);
+        console.log('Host:', window.location.host);
+    </script>
+</body>
+</html>

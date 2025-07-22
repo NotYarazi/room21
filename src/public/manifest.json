@@ -1,0 +1,23 @@
+{
+    "name": "Room21 - Anonymous Chat",
+    "short_name": "Room21",
+    "description": "Secure anonymous chat application with real-time messaging",
+    "version": "4.0.0",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#667eea",
+    "theme_color": "#00d4aa",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "assets/icons/star.png",
+            "sizes": "any",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["social", "communication"],
+    "lang": "en",
+    "dir": "ltr",
+    "prefer_related_applications": false
+}

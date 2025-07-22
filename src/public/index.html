@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Room21</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css?v=4.0">
+    <link rel="shortcut icon" href="./assets/icons/fmv6b-xmx02-001.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json".>
+    
+    <!-- Meta tags -->
+    <meta name="description" content="Room21 - Anonymous chat room">
+    <meta name="theme-color" content="#0d1117">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+    <!-- Loading screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Connecting to NeoChat...</p>
+        </div>
+    </div>
+
+    <!-- Main app container -->
+    <div id="app" class="app-container" style="display: none;">
+        <!-- Header -->
+        <header class="header-container">
+            <div class="title-plate">
+                <h1 class="title">Room21</h1>
+                <div class="status-bar">
+                    <div class="user-info">
+                        <span id="current-username" class="current-username">Guest</span>
+                        <span>•</span>
+                        <span id="user-count" class="user-count">0</span> online
+                    </div>
+                    <span id="connection-status" class="connection-status">
+                        Connecting
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main chat area -->
+        <main class="chat-container">
+            <div id="chat-box" class="chat-box" role="log" aria-live="polite">
+                <!-- Welcome banner -->
+                <div class="welcome-banner">
+                    <h3>Welcome to Room21</h3>
+                    <p>Start chatting anonymously with other users. Type /help for commands.</p>
+                </div>
+            </div>
+            
+            <!-- Input area -->
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="input-field" 
+                        class="input-field"
+                        placeholder="Chat anything..."
+                        maxlength="500"
+                        autocomplete="off"
+                        spellcheck="true"
+                        rows="1"
+                    ></textarea>
+                    <button 
+                        id="send-button" 
+                        class="send-button"
+                        type="button"
+                        disabled
+                        title="Send message"
+                    >
+                        <span class="send-icon">↗</span>
+                    </button>
+                </div>
+                <div class="input-info">
+                    <small class="help-text">Enter to send • Shift+Enter for new line • /help for commands</small>
+                    <small class="char-counter">
+                        <span id="char-count">0</span>/500
+                    </small>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <span>Room21 • v4.0</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js?v=4.0"></script>
+
+    <!-- Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js').catch(console.error);
+        }
+    </script>
+</body>
+</html>
