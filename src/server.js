@@ -90,9 +90,9 @@ function sanitizeMessage(message) {
     // More appropriate HTML sanitization for chat messages
     // Only escape the most dangerous characters while preserving readability
     return message
+        .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
-        .replace(/&/g, '&amp;')
         .trim();
 }
 
