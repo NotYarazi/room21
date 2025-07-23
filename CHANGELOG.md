@@ -2,7 +2,21 @@
 
 All notable changes to Room21 will be documented in this file.
 
-## [4.0.0] - 2025-07-22
+## [4.1] - 2025-07-23
+### Added
+- 🖼 Added Screenshot preview file: [Screenshots.md](https://github.com/NotYarazi/room21/blob/main/brand/Screenshots.md)
+
+### Security
+- 🔒 Updated Security/User Privacy Policy: [Security.md](https://github.com/NotYarazi/room21/blob/main/SECURITY.md)
+  
+### Fixed
+- Fixed insecure setting in the middle ware [#9f0f7e7](https://github.com/NotYarazi/room21/commit/9f0f7e72016544434fff4e9f2e745682585e72cb)
+- Fixed Insecure random generation [#74d2a4c](https://github.com/NotYarazi/room21/commit/74d2a4cd124e7d2506c07b1a7615cdaf477480ce) 
+- Fixed Rate limits in the server side [#7592fc5](https://github.com/NotYarazi/room21/commit/7592fc5ff817e03c8ade1ec5a952a7526b524fd6)
+- Fixed Client-side cross-site scripting vulnerability [#f5594d8](https://github.com/NotYarazi/room21/commit/f5594d825a54830ee6611c52cc73ad41787bbafb)
+
+---
+## [4.0] - 2025-07-22
 
 ### Added
 - 🎨 Complete UI redesign with Copilot-inspired glassmorphism theme
@@ -36,6 +50,7 @@ All notable changes to Room21 will be documented in this file.
 - 🛡 Content Security Policy headers
 - 🔒 CORS policy configuration
 
+---
 ## [3.x] - Previous Versions
 
 ### Added
