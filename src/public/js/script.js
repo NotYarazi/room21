@@ -1,3 +1,4 @@
+import _ from 'lodash';
 document.addEventListener('DOMContentLoaded', () => {
     const chatBox = document.getElementById('chat-box');
     const inputField = document.getElementById('input-field');
@@ -145,7 +146,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         // Check for mentions
-        const mentionPattern = new RegExp(`@${currentUsername}\\b`, 'i');
+        const safeUsername = _.escapeRegExp(currentUsername);
+        const mentionPattern = new RegExp(`@${safeUsername}\\b`, 'i');
         const isMentioned = mentionPattern.test(message);
         
         if (isMentioned) {
