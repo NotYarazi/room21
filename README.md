@@ -148,7 +148,7 @@ Room21 can be installed as a Progressive Web App:
 - **Local Storage** - Message persistence
 
 ### File Structure
-- Check **[File Structure File](PROJECT_STRUCTURE.MD)**
+- Check **[File Structure File](PROJECT_STRUCTURE.md)**
 
 ## 🔒 Security Features
 
