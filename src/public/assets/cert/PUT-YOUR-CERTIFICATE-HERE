@@ -1,1 +1,1 @@
-if you are seeing this.. the actual content is in the file's title.
+* In this folder, put your certeficate, crt or pfx file and then put the certificate password on the main .env file.
