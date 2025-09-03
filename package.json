@@ -1,6 +1,6 @@
 {
   "name": "room21",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "An simple, secure, and anonymous real-time chat application built with Node.js.",
   "main": "src/server.js",
   "keywords": [
