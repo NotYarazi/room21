@@ -2,7 +2,7 @@
     "name": "Room21 - Anonymous Chat",
     "short_name": "Room21",
     "description": "Secure anonymous chat application with real-time messaging",
-    "version": "4.0.0",
+    "version": "4.1.1",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#667eea",
