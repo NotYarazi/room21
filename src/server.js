@@ -45,10 +45,8 @@ function loadBannedIPs() {
             
             // Handle both old format (array) and new format (object)
             if (Array.isArray(bannedData)) {
-                // Convert old format to new format
                 bannedData.forEach(ip => bannedIPs.set(ip, 'No reason provided'));
             } else {
-                // New format with reasons
                 Object.entries(bannedData).forEach(([ip, reason]) => bannedIPs.set(ip, reason));
             }
             
@@ -87,8 +85,6 @@ function logMessage(message) {
 }
 
 function sanitizeMessage(message) {
-    // More appropriate HTML sanitization for chat messages
-    // Only escape the most dangerous characters while preserving readability
     return message
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
@@ -132,7 +128,7 @@ function generateUniqueUsername() {
     return `${adjective}${noun}${number}`;
 }
 
-// Enhanced security middleware
+// Security middleware
 let helmetConfig;
 
 if (USE_HTTPS) {
@@ -165,7 +161,7 @@ if (USE_HTTPS) {
                 imgSrc: ["'self'", "data:"]
             }
         },
-        hsts: false // Disable HSTS in HTTP mode
+        hsts: false
     };
     console.log('Using HTTP configuration (CSP disabled)');
 }
@@ -175,7 +171,7 @@ app.use(helmet(helmetConfig));
 // Session middleware
 app.use(session({
     secret: process.env.SESSION_SECRET || 'room21-secret-key-change-in-production',
-    name: USE_HTTPS ? 'connect.sid.secure' : 'connect.sid.http', // Different names to avoid conflicts
+    name: USE_HTTPS ? 'connect.sid.secure' : 'connect.sid.http',
     resave: false,
     saveUninitialized: true,
     cookie: { 
@@ -261,8 +257,7 @@ const wss = new WebSocket.Server({
             console.log(`Blocked connection from banned IP: ${clientIP} (${bannedIPs.get(clientIP)})`);
             return false;
         }
-        // Basic origin verification
-        return true; // Implement proper origin checking in production
+        return true;
     }
 });
 
@@ -401,7 +396,6 @@ function broadcastUserCount() {
 }
 
 function handleClearCommand(ws) {
-    // Only send clear command to the requesting user, not to everyone
     ws.send(JSON.stringify({
         type: 'clear_chat',
         timestamp: new Date().toISOString()
@@ -495,7 +489,6 @@ server.listen(port, '0.0.0.0', () => {
     console.log('=============================');
     console.log('Type commands below:');
     
-    // Initialize interactive terminal
     initializeTerminalInterface();
 });
 
@@ -595,7 +588,7 @@ function handleTerminalCommand(command) {
             broadcastToAll({
                 type: 'system',
                 username: 'System',
-                message: `📢 ANNOUNCEMENT: ${args}`,
+                message: `ANNOUNCEMENT: ${args}`,
                 timestamp: new Date().toISOString(),
                 style: 'success'
             });
@@ -651,7 +644,6 @@ function handleTerminalCommand(command) {
 
         case 'reload':
             console.log('Reloading server configuration...');
-            // You could implement config reloading here
             console.log('Configuration reloaded');
             break;
 
@@ -675,7 +667,6 @@ function handleTerminalCommand(command) {
             break;
 
         case '':
-            // Empty command, do nothing
             break;
 
         default:
@@ -754,7 +745,7 @@ function banUser(target, reason = 'No reason provided') {
             userFound = true;
             banIP(client.ip, reason);
             
-            // Also kick the user with beautiful ban message
+            // Also kick the user with ban message
             wss.clients.forEach(ws => {
                 if (ws.clientData && ws.clientData.id === id) {
                     ws.send(JSON.stringify({
@@ -771,7 +762,7 @@ function banUser(target, reason = 'No reason provided') {
                 }
             });
             
-            console.log(`\n🚫 BANNED USER 🚫`);
+            console.log(`\n BANNED USER`);
             console.log(`Username: ${client.username}`);
             console.log(`IP Address: ${client.ip}`);
             console.log(`Reason: ${reason}`);
@@ -791,7 +782,7 @@ function banIP(ip, reason = 'No reason provided') {
     bannedIPs.set(ip, reason);
     saveBannedIPs();
     
-    console.log(`\n🚫 IP BANNED 🚫`);
+    console.log(`\n IP BANNED `);
     console.log(`IP Address: ${ip}`);
     console.log(`Reason: ${reason}`);
     console.log(`Time: ${new Date().toISOString()}`);
@@ -823,7 +814,7 @@ function unbanIP(ip) {
         bannedIPs.delete(ip);
         saveBannedIPs();
         
-        console.log(`\n✅ IP UNBANNED ✅`);
+        console.log(`\n IP UNBANNED `);
         console.log(`IP Address: ${ip}`);
         console.log(`Previous ban reason: ${reason}`);
         console.log(`Time: ${new Date().toISOString()}`);
