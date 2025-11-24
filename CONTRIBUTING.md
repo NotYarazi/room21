@@ -37,8 +37,5 @@ Thank you for your interest in contributing to Room21! This document provides gu
 - Test on multiple browsers and devices
 - Follow existing code style and conventions
 
-## License
-By contributing, you agree that your contributions will be licensed under the same Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License as the project.
-
 ---
 *Remember: This is a privacy-focused, anonymous chat application. All contributions should align with these core principles.*
