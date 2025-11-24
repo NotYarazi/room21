@@ -100,6 +100,8 @@ function isRateLimited(clientId) {
         rateLimitMap.set(clientId, now);
         return false;
     }
+    // Log rate limit violation
+    logMessage(`Rate limit violation by client ${clientId}`);
     return true;
 }
 

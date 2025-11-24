@@ -21,7 +21,7 @@
     <div id="loading-screen" class="loading-screen">
         <div class="loading-content">
             <div class="loading-spinner"></div>
-            <p>Connecting to NeoChat...</p>
+            <p>Connecting to Room21...</p>
         </div>
     </div>
 
@@ -67,6 +67,14 @@
                         rows="1"
                     ></textarea>
                     <button 
+                        id="emoji-button" 
+                        class="emoji-button"
+                        type="button"
+                        title="Insert emoji"
+                    >
+                        😀
+                    </button>
+                    <button 
                         id="send-button" 
                         class="send-button"
                         type="button"
@@ -88,13 +96,13 @@
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
-                <span>Room21 • v4.0</span>
+                <span>Room21 • v4.1.2</span>
             </div>
         </footer>
     </div>
 
     <!-- Scripts -->
-    <script src="js/script.js?v=4.0"></script>
+    <script type="module" src="js/script.js?v=4.1.2"></script>
 
     <!-- Service Worker -->
     <script>

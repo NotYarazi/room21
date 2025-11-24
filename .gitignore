@@ -55,8 +55,7 @@ desktop.ini
 Thumbs.db
 
 # VS Code settings (optional, uncomment if you want to exclude)
-# .vscode/
-
+.vscode/
 
 # Temporary files
 *.tmp

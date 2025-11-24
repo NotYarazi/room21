@@ -2,6 +2,18 @@
 
 All notable changes to Room21 will be documented in this file.
 
+## [4.1.2] - 2025-11-24
+### Added
+- Random emoji picker!!!
+
+### Changed
+- License changed `CC-BY-NC-SA-4.0` to `WTFPL` (ABSOLUTE FREEDOM!!)
+- Some design inconsistencies
+- Made comments on the code clearer
+
+### Security
+- Updated dependencies: `@ngrok/ngrok` to latest.
+---
 ## [4.1] - 2025-07-23
 ### Added
 - 🖼 Added Screenshot preview file: [Screenshots.md](https://github.com/NotYarazi/room21/blob/main/brand/Screenshots.md)
@@ -11,7 +23,7 @@ All notable changes to Room21 will be documented in this file.
   
 ### Fixed
 - Fixed insecure setting in the middle ware [#9f0f7e7](https://github.com/NotYarazi/room21/commit/9f0f7e72016544434fff4e9f2e745682585e72cb)
-- Fixed Insecure random generation [#74d2a4c](https://github.com/NotYarazi/room21/commit/74d2a4cd124e7d2506c07b1a7615cdaf477480ce) 
+- Fixed Insecure random generation [#74d2a4c](https://github.com/NotYarazi/room21/commit/74d2a4cd124e7d2506c07b1a7615cdaf477480ce)
 - Fixed Rate limits in the server side [#7592fc5](https://github.com/NotYarazi/room21/commit/7592fc5ff817e03c8ade1ec5a952a7526b524fd6)
 - Fixed Client-side cross-site scripting vulnerability [#f5594d8](https://github.com/NotYarazi/room21/commit/f5594d825a54830ee6611c52cc73ad41787bbafb)
 
@@ -19,7 +31,7 @@ All notable changes to Room21 will be documented in this file.
 ## [4.0] - 2025-07-22
 
 ### Added
-- 🎨 Complete UI redesign with Copilot-inspired glassmorphism theme
+- 🎨 Complete UI redesign with glassmorphism theme
 - 🔒 Enhanced security with improved input sanitization
 - 💬 Better message handling and real-time communication
 - 📱 Improved mobile support and responsive design

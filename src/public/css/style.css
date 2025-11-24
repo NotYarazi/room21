@@ -1,8 +1,5 @@
-/* NeoChat - Copilot-Inspired Design v4.0 */
 
-/* CSS Variables - Copilot Theme */
 :root {
-    /* Copilot Colors */
     --bg-primary: #130d17;
     --bg-secondary: #1f1622;
     --bg-tertiary: #29212d;
@@ -61,6 +58,11 @@ body {
     overflow: hidden;
 }
 
+::selection{
+    background-color: yellow;
+    color: black;
+}
+
 /* Loading screen */
 .loading-screen {
     position: fixed;
@@ -106,7 +108,7 @@ body {
     width: 100%;
 }
 
-/* Header - Copilot style */
+/* Header */
 .header-container {
     background: var(--bg-secondary);
     border-bottom: 1px solid var(--border-default);
@@ -191,7 +193,7 @@ body {
     overflow: hidden;
 }
 
-/* Chat box - Copilot conversation style */
+/* Chat box */
 .chat-box {
     flex: 1;
     padding: 24px;
@@ -202,7 +204,7 @@ body {
     gap: 16px;
 }
 
-/* Custom scrollbar - Copilot style */
+/* Custom scrollbar */
 .chat-box::-webkit-scrollbar {
     width: 8px;
 }
@@ -353,7 +355,7 @@ body {
     border-bottom-color: var(--text-accent);
 }
 
-/* System messages - Copilot style notifications */
+/* System messages */
 .system-message {
     align-self: center;
     background: var(--bg-overlay);
@@ -421,7 +423,7 @@ body {
     box-shadow: 0 0 0 1px rgba(6, 182, 212, 0.3);
 }
 
-/* Input container - Copilot prompt style */
+/* Input container */
 .input-container {
     padding: 16px 24px 24px;
     background: var(--bg-secondary);
@@ -478,6 +480,35 @@ body {
     justify-content: center;
     transition: all 0.2s;
     font-size: 14px;
+}
+
+.emoji-button {
+    position: absolute;
+    right: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    font-size: 16px;
+}
+
+.emoji-button:hover {
+    background: var(--bg-overlay);
+    color: var(--text-accent);
+}
+
+.emoji-button:focus-visible {
+    outline: 2px solid var(--border-accent);
+    outline-offset: 2px;
 }
 
 .send-button:hover:not(:disabled) {

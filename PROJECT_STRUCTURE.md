@@ -14,7 +14,7 @@ Room21/
 │       ├── 📄 manifest.json  # PWA manifest
 │       ├── 📄 sw.js          # Service Worker for PWA
 │       ├── 📁 css/           # Stylesheets
-│       │   └── 📄 style.css  # Main Copilot-inspired styles
+│       │   └── 📄 style.css  # Main styles
 │       ├── 📁 js/            # Client-side JavaScript
 │       │   └── 📄 script.js  # Main client application logic
 │       └── 📁 assets/        # Static assets

@@ -1,4 +1,7 @@
-import _ from 'lodash';
+// Utility function to escape regex special characters
+function escapeRegExp(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
 document.addEventListener('DOMContentLoaded', () => {
     const chatBox = document.getElementById('chat-box');
     const inputField = document.getElementById('input-field');
@@ -9,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const charCount = document.getElementById('char-count');
     const helpBtn = document.getElementById('help-btn');
     const clearBtn = document.getElementById('clear-btn');
+    const emojiButton = document.getElementById('emoji-button');
     
     // Dynamic WebSocket connection
     const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
@@ -28,13 +32,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const pingSound = new Audio('./assets/sounds/ping.wav');
     pingSound.volume = 0.3;
     
+    // Emoji list
+    const emojis = ['😀', '😂', '😊', '😍', '🤔', '👍', '👎', '❤️', '🔥', '✨', '🎉', '😎', '🤩', '😢', '😭', '😡', '🤗', '🙌', '👏', '💯'];
+    
     // Auto-resize textarea
     function autoResizeTextarea() {
         inputField.style.height = 'auto';
         inputField.style.height = Math.min(inputField.scrollHeight, 120) + 'px';
     }
     
-    // Show app with Copilot-style loading
+    // Insert random emoji
+    function insertRandomEmoji() {
+        const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+        const start = inputField.selectionStart;
+        const end = inputField.selectionEnd;
+        const text = inputField.value;
+        const before = text.substring(0, start);
+        const after = text.substring(end, text.length);
+        inputField.value = before + randomEmoji + after;
+        inputField.selectionStart = inputField.selectionEnd = start + randomEmoji.length;
+        inputField.focus();
+        autoResizeTextarea();
+        // Update char count
+        const length = inputField.value.length;
+        charCount.textContent = length;
+    }
+    
+    // Show app after loading
     setTimeout(() => {
         loadingScreen.style.opacity = '0';
         setTimeout(() => {
@@ -146,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         // Check for mentions
-        const safeUsername = _.escapeRegExp(currentUsername);
+        const safeUsername = escapeRegExp(currentUsername);
         const mentionPattern = new RegExp(`@${safeUsername}\\b`, 'i');
         const isMentioned = mentionPattern.test(message);
         
@@ -507,6 +531,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event listeners
     sendButton.addEventListener('click', sendMessage);
+    
+    emojiButton.addEventListener('click', insertRandomEmoji);
 
     inputField.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
@@ -574,5 +600,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize
     updateConnectionStatus(false);
-    console.log('Room21 Copilot-style client initialized');
+    console.log('Room21 client initialized');
 });

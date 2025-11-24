@@ -1,12 +1,11 @@
 <img src="https://github.com/NotYarazi/room21/blob/main/brand/Room21.png" align="left" width="180"/>
 
-### `Room21 v4.1.1`
+### `Room21 v4.1.2`
 
 ### A modern, secure, and anonymous real-time chat application built with Node.js, WebSockets, and modern web technologies.
 ---
 ---
-> **⚠️ Disclaimer**: This is the original Room21 project by umaera (NotYarazi). Any forks, modifications, or derivative works are not associated with or endorsed by the original authors. Please verify the authenticity of the source before use.
-## ✨ Features
+## Features
 
 ### 🔒 Security & Privacy
 - **Complete anonymity** - No registration required
@@ -38,7 +37,7 @@
 - **Message queuing** - Queues messages when offline
 - **Error handling** - Graceful error recovery
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - **Node.js** v16 or higher
@@ -91,7 +90,7 @@
    - **HTTPS Mode**: `https://localhost:3000`
    - Accept the self-signed certificate warning if using development certificates
 
-## 🔧 Configuration
+## Configuration
 
 ### Server Protocol
 The server can run in HTTP or HTTPS mode:
@@ -116,7 +115,7 @@ The server can run in HTTP or HTTPS mode:
 - Maximum message length: 500 characters
 - Session timeout: 24 hours
 
-## 📱 PWA Installation
+## PWA Installation
 
 Room21 can be installed as a Progressive Web App:
 
@@ -124,14 +123,14 @@ Room21 can be installed as a Progressive Web App:
 2. Look for the "Install" or "Add to Home Screen" option
 3. Follow the browser prompts to install
 
-## 🎮 Chat Commands
+## Chat Commands
 
 - `/help` - Show available commands
 - `/nick <name>` - Change your nickname
 - `/users` - List online users
 - `/clear` - Clear chat history (admin-like feature)
 
-## 🏗 Architecture
+## Architecture
 
 ### Backend (Node.js)
 - **Express.js** - Web server framework
@@ -150,7 +149,7 @@ Room21 can be installed as a Progressive Web App:
 ### File Structure
 - Check **[File Structure File](PROJECT_STRUCTURE.md)**
 
-## 🔒 Security Features
+## Security Features
 
 ### Input Validation
 - HTML sanitization to prevent XSS
@@ -169,7 +168,7 @@ Room21 can be installed as a Progressive Web App:
 - Security headers (CSP, X-Frame-Options, etc.)
 - Session security
 
-## 🛠 Development
+## Development
 
 ### Local Development
 1. Install dependencies: `npm install`
@@ -187,13 +186,13 @@ Room21 can be installed as a Progressive Web App:
 - Check responsive design
 - Test PWA functionality
 
-## 📋 Documentation
+## Documentation
 
 - **[Contributing Guidelines](CONTRIBUTING.md)** - How to contribute to the project
 - **[Changelog](CHANGELOG.md)** - Detailed version history and changes
 - **[License](LICENSE)** - Creative Commons licensing terms
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting pull requests.
 
@@ -206,25 +205,28 @@ We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
-## 👥 Credits
+## Credits
 
 - **UmaEra (NotYarazi)** - Original development
+
 - **wassammy & dhummy** - Contributors (testing & support)
-- **Modern Web Standards** - Built with latest web technologies
+
 - **Community** - Thanks to all users and contributors out there!
 
 ---
 
-## 📄 License & Privacy
+## License & Privacy
 
 ### License
-This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License**.
+This project is licensed under the **DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE**.
 
 - ✅ **Free to use** for non-commercial purposes
 - ✅ **Free to distribute** and share
 - ✅ **Free to modify** and adapt
-- ❌ **No commercial use** without permission
-- 📝 **Attribution required** when sharing or modifying
+- ✅ **Free to use commercially** without permission
+- ✅ **No Attribution required** when sharing or modifying
+
+so.. absolute freedom, do whatever, just make it cool.
 
 See the [LICENSE](LICENSE) file for details.
 
@@ -234,5 +236,3 @@ Room21 is built with **privacy-first principles**:
 - No server-side message storage
 - Complete anonymity by design
 - HTTPS/WSS encryption for all communications
-
-**⚠️ Important**: The original authors are not responsible for any modifications, forks, or derivative works. Only use trusted sources and verify authenticity.
