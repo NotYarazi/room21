@@ -43,7 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Insert random emoji
     function insertRandomEmoji() {
-        const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+        // Use cryptographically secure random index
+        const array = new Uint32Array(1);
+        window.crypto.getRandomValues(array);
+        const randomIndex = array[0] % emojis.length;
+        const randomEmoji = emojis[randomIndex];
         const start = inputField.selectionStart;
         const end = inputField.selectionEnd;
         const text = inputField.value;
