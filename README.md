@@ -7,14 +7,14 @@
 ---
 ## Features
 
-### 🔒 Security & Privacy
+### Security & Privacy
 - **Complete anonymity** - No registration required
 - **HTTPS/WSS encryption** - Secure connections
 - **Input sanitization** - XSS protection
 - **Rate limiting** - Spam protection
 - **Content Security Policy** - Enhanced security headers
 
-### 💬 Chat Features
+### Chat Features
 - **Real-time messaging** - Instant communication
 - **User mentions** (@username) with sound notifications
 - **Dynamic usernames** - Generated or custom nicknames
@@ -22,7 +22,7 @@
 - **Commands system** - `/help`, `/nick`, `/users`, `/clear`
 - **Character counter** - 500 character limit with visual feedback
 
-### 🎨 Modern UI/UX
+### Modern UI/UX
 - **Glassmorphism design** - Beautiful modern interface
 - **Responsive layout** - Works on all devices
 - **Dark theme** - Easy on the eyes
@@ -30,7 +30,7 @@
 - **PWA support** - Install as mobile/desktop app
 - **Accessibility** - Screen reader support, keyboard navigation
 
-### 🛠 Technical Features
+### Technical Features
 - **WebSocket connections** - Real-time communication
 - **Service Worker** - Offline capability and caching
 - **Auto-reconnection** - Handles network issues
